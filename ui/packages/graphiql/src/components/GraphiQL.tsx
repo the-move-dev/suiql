@@ -207,6 +207,7 @@ export type GraphiQLInterfaceProps = WriteableEditorProps &
      * @default true
      */
     isHeadersEditorEnabled?: boolean;
+    updateEndpoint: Function;
     /**
      * An object that allows configuration of the toolbar next to the query
      * editor.
@@ -488,9 +489,13 @@ export function GraphiQLInterface(props: GraphiQLInterfaceProps) {
                       </div>
                       <div className="graphiql-query-editor-header-controls">
                         <div className="header-controls-dropdown">
-                          <select name="network-select" placeholder="Network">
+                          <select
+                            name="network-select"
+                            placeholder="Network"
+                            onChange={(e) => props.updateEndpoint(e.target.value)}
+                          >
                             <option value="testnet" defaultChecked>Testnet</option>
-                            <option value="mainnet" disabled>Mainnet</option>
+                            <option value="mainnet">Mainnet</option>
                           </select>
                         </div>
                         <ExecuteButton />

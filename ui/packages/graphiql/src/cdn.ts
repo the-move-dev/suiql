@@ -101,28 +101,37 @@ function updateURL() {
     history.replaceState(null, 'null', newSearch);
 }
 
-ReactDOM.render(
+function updateEndpoint(value: any) {
+  renderApplication(value)
+}
+
+function renderApplication(currentEndpoint = 'testnet') {
+  ReactDOM.render(
     // @ts-expect-error
     React.createElement(GraphiQL.GraphiQLWithExplorer, {
-        // @ts-expect-error
-        fetcher: GraphiQL.createFetcher({
-            url: 'https://api.suiql.com/graphql/mainnet',
-            subscriptionUrl: 'ws://localhost:8081/subscriptions',
-        }),
-        query: parameters.query,
-        variables: parameters.variables,
-        headers: parameters.headers,
-        defaultHeaders: parameters.defaultHeaders,
-        onEditQuery,
-        onEditVariables,
-        onEditHeaders,
-        defaultEditorToolsVisibility: true,
-        isHeadersEditorEnabled: false,
-        shouldPersistHeaders: true,
-        inputValueDeprecation: true,
-        onTabChange,
+      // @ts-expect-error
+      fetcher: GraphiQL.createFetcher({
+        url: `https://api.suiql.com/graphql/${currentEndpoint}`,
+        subscriptionUrl: 'ws://localhost:8081/subscriptions',
+      }),
+      query: parameters.query,
+      variables: parameters.variables,
+      headers: parameters.headers,
+      defaultHeaders: parameters.defaultHeaders,
+      onEditQuery,
+      onEditVariables,
+      onEditHeaders,
+      updateEndpoint,
+      defaultEditorToolsVisibility: true,
+      isHeadersEditorEnabled: false,
+      shouldPersistHeaders: true,
+      inputValueDeprecation: true,
+      onTabChange,
     }),
     document.getElementById('graphiql'),
-);
+  );
+}
+
+renderApplication()
 
 export default GraphiQL;
