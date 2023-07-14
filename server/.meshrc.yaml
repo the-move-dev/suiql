@@ -1,0 +1,18 @@
+sources:
+  - name: SuiQL
+    handler:
+      postgraphile:
+        connectionString: "postgres://postgres:password@127.0.0.1:5432/sui_indexer_mainnet"
+        options:
+          graphileBuildOptions:
+            pgDisableDefaultMutations: true
+            pgDisableDefaultSubscriptions: true
+
+transforms:
+  - filterSchema:
+      mode: wrap
+      filters:
+        - Mutation.!*
+        - Subscription.!*
+        - Type.!{KnexMigration*, KnexMigrationsLock*, Subscription, Mutation, DieselManageUpdatedAtPayload}
+        
