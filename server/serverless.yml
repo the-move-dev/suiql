@@ -1,0 +1,48 @@
+service: suiql-api
+
+custom:
+  stage: ${opt:stage, 'offline'}
+  region: ${file(./stages/${self:custom.stage}.yml):region}
+  webpack:
+    webpackConfig: 'webpack.config.js'
+    includeModules: true
+  serverless-offline:
+    httpPort: 4000
+    noPrependStageInUrl: true
+    ignoreJWTSignature: true
+
+provider:
+  name: aws
+  region: ${self:custom.region}
+  runtime: nodejs16.x
+  environment: ${file(./stages/${self:custom.stage}.yml):environment}
+  memorySize: 512
+  timeout: 10
+  logRetentionInDays: 30
+  lambdaHashingVersion: 20201221
+  logs:
+    httpApi: true
+  # httpApi:
+  #   cors:
+  #     allowedOrigins:
+  #       - ${self:provider.environment.ALLOWED_ORIGIN}
+  #     allowedMethods:
+  #       - POST
+  #       - OPTIONS
+  #     allowedHeaders:
+  #       - '*'
+
+functions:
+  graphql:
+    handler: src/handlers/graphql.handler
+    events:
+      - httpApi:
+          path: '/graphql/{network}'
+          method: 'POST'
+  
+package:
+  individually: true
+
+plugins:
+  - serverless-webpack
+  - serverless-offline
