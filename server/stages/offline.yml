@@ -7,9 +7,9 @@ environment:
   ALLOWED_ORIGIN: '*'
   QUERY_LIMIT: 1000
 
-  # DB_HOST: '127.0.0.1'
-  # DB_PORT: '5432'
-  # DB_USERNAME: 'postgres'
-  # DB_PASSWORD: 'password'
-  # TESTNET_DB_NAME: 'sui_indexer_testnet'
-  # MAINNET_DB_NAME: 'sui_indexer_mainnet'
+  DB_HOST: '127.0.0.1'
+  DB_PORT: '5432'
+  DB_USERNAME: 'postgres'
+  DB_PASSWORD: 'password'
+  TESTNET_DB_NAME: 'sui_indexer_testnet'
+  MAINNET_DB_NAME: 'sui_indexer_mainnet'

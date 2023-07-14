@@ -7,7 +7,7 @@ custom:
     webpackConfig: 'webpack.config.js'
     includeModules: true
   serverless-offline:
-    httpPort: 5000
+    httpPort: 4000
     noPrependStageInUrl: true
     ignoreJWTSignature: true
 
@@ -22,15 +22,15 @@ provider:
   lambdaHashingVersion: 20201221
   logs:
     httpApi: true
-  httpApi:
-    cors:
-      allowedOrigins:
-        - ${self:provider.environment.ALLOWED_ORIGIN}
-      allowedMethods:
-        - POST
-        - OPTIONS
-      allowedHeaders:
-        - '*'
+  # httpApi:
+  #   cors:
+  #     allowedOrigins:
+  #       - ${self:provider.environment.ALLOWED_ORIGIN}
+  #     allowedMethods:
+  #       - POST
+  #       - OPTIONS
+  #     allowedHeaders:
+  #       - '*'
 
 functions:
   graphql:

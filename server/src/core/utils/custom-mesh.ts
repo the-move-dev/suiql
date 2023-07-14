@@ -6,7 +6,7 @@ function replaceTemplateString(vars: any) {
   let templateString =
     'postgres://[USERNAME]:[PASSWORD]@[HOST]:[PORT]/[DATABASE]';
 
-  vars.forEach((key: any) => {
+  Object.keys(vars).forEach((key: any) => {
     templateString = templateString.replace(`[${key}]`, vars[key]);
   });
 
@@ -18,12 +18,10 @@ export async function executeCustomMesh(
   newDocument: any,
   variables: any
 ) {
-  const username = process.env.DB_USERNAME;
-  const password = process.env.DB_PASSWORD;
   const dbName = process.env[`${network.toUpperCase()}_DB_NAME`];
   const vars = {
-    USERNAME: username,
-    PASSWORD: password,
+    USERNAME: process.env.DB_USERNAME,
+    PASSWORD: process.env.DB_PASSWORD,
     HOST: process.env.DB_HOST,
     PORT: process.env.DB_PORT,
     DATABASE: dbName,
