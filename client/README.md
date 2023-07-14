@@ -1,13 +1,8 @@
 <!-- @format -->
 
-# SuiQL
+# SuiQL UI application
 
-Accelerate your decentralized application development   with our seamless Sui indexing GraphQL API.
-
-Data is stored in an object-based chain model with horizontal scaling. SuiQL makes querying the Sui blockchain fast and cost-effective.
-
-
-![suiql (1)](https://github.com/peeranha/suiql-ui/assets/44616431/e688ac70-583a-48ee-bac6-c4371a980cdb)
+Uses [GraphiQL](https://github.com/graphql/graphiql) as base implementation.
 
 ### Getting Started
 
