@@ -1,0 +1,61 @@
+@import url('@reach/dialog/styles.css');
+
+[data-reach-dialog-overlay] {
+  align-items: center;
+  background: rgba(9, 2, 24, 0.8);
+  display: flex;
+  justify-content: center;
+  /**
+   * CodeMirror has a `z-index` set for the container of the scrollbar of the
+   * editor, so we have to add one here to make sure that the dialog is shown
+   * above the editor scrollbar (if they are visible).
+   */
+  z-index: 999;
+}
+
+[data-reach-dialog-content] {
+  background: linear-gradient(190.9deg, #1F182D 16.02%, #110A1F 91.92%);
+  border: var(--popover-border);
+  border-radius: var(--border-radius-12);
+  box-shadow: var(--popover-box-shadow);
+  margin: 0;
+  max-height: 80vh;
+  max-width: 80vw;
+  overflow: auto;
+  padding: 0;
+  width: unset;
+}
+
+.graphiql-key {
+  background: #2D283A;
+  color: #595BD4;
+}
+
+.graphiql-dialog-header {
+  padding: 10px 24px !important;
+  font-weight: 600;
+  font-size: 18px;
+  color: rgba(192, 186, 207, 1);
+}
+
+.graphiql-dialog-section {
+  padding-top: 10px;
+}
+
+.graphiql-dialog-section p {
+  color: rgba(192, 186, 207, 1);
+  font-size: 12px;
+  margin-bottom: 0;
+}
+
+.graphiql-dialog-section p > a {
+  color: rgba(89, 91, 212, 1);
+}
+
+.graphiql-dialog-close > svg {
+  color: hsla(var(--color-neutral), var(--alpha-secondary));
+  display: block;
+  height: var(--px-12);
+  padding: var(--px-12);
+  width: var(--px-12);
+}

@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "composite": true
+  },
+  "files": [],
+  "include": [],
+  "references": [
+    {
+      "path": "../packages/graphiql-toolkit"
+    },
+    {
+      "path": "../packages/codemirror-graphql"
+    },
+    {
+      "path": "../packages/graphql-language-service"
+    },
+    {
+      "path": "../packages/graphql-language-service-server"
+    },
+    {
+      "path": "../packages/graphql-language-service-cli"
+    },
+  ]
+}
