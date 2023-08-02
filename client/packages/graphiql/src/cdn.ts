@@ -9,7 +9,7 @@ import ReactDOM from 'react-dom'
 import * as GraphiQLReact from '@graphiql/react';
 import { createGraphiQLFetcher } from '@graphiql/toolkit';
 import * as GraphQL from 'graphql';
-import { GraphiQL } from './components/GraphiQL';
+import { GraphiQL } from './pages/GraphiQL';
 import GraphiQLWithExplorer from './WithExplorer';
 
 import '@graphiql/react/font/roboto.css';
@@ -45,6 +45,9 @@ GraphiQL.React = GraphiQLReact;
 
 // @ts-expect-error
 GraphiQL.GraphiQLWithExplorer = GraphiQLWithExplorer;
+
+// @ts-expect-error
+window.dataLayer ||= [];
 
 // Parse the search string to get url parameters.
 const parameters: any = {};

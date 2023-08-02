@@ -31,12 +31,7 @@ const resultConfig = {
     // bypass simple localhost CORS restrictions by setting
     // these to 127.0.0.1 in /etc/hosts
     allowedHosts: ['local.example.com', 'graphiql.com'],
-    setupMiddlewares: (middlewares, devServer) => {
-      require('../test/beforeDevServer')(devServer.app);
-      require('../test/afterDevServer')();
-
-      return middlewares;
-    },
+    historyApiFallback: true,
   },
   devtool: isDev ? 'cheap-module-source-map' : 'source-map',
   externals: {
