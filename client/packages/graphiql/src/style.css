@@ -122,7 +122,8 @@
   height: 130px;
   font-size: 40px;
   z-index: 999;
-  padding: 20px;
+  padding-top: 20px;
+  margin-bottom: 50px;
   background: transparent;
   display: flex;
   justify-content: space-between;
@@ -132,6 +133,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-left: 20px;
 }
 
 .header-logo {
@@ -153,7 +155,7 @@
   linear-gradient(0deg, rgba(39, 33, 56, 0.8), rgba(39, 33, 56, 0.8));
   border: 1px solid #272138;
   border-radius: 22px;
-  margin-right: 40px;
+  margin-right: 20px;
   padding: 16px 24px;
   display: flex;
   align-items: center;
@@ -430,24 +432,46 @@ button.graphiql-tab-add > svg {
 }
 
 /* The footer below the response view */
-.root .graphiql-footer {
+.graphiql-footer {
   width: 100%;
-  height: 40px;
+  height: 80px;
   background: radial-gradient(278.12% 1089.85% at 50% 50%, #090218 0%, #0B051D 100%);
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   color: rgba(154, 151, 174, 1);
   margin-top: 20px;
-  padding: 20px;
+  padding: 20px 0;
   font-size: 14px;
   border-top: 1px solid rgba(39, 33, 56, 1);
   font-family: 'Source Sans Pro', sans-serif;
 }
-.graphiql-footer .footer-madeBy {
-  margin-right: 20%;
+
+.graphiql-footer-left {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  margin-left: 20px;
+}
+
+.footer-aboutUs {
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: none;
+  margin-bottom: 15px;
+}
+
+.graphiql-footer-right {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  align-items: flex-end;
+  justify-content: flex-end;
+  margin-right: 20px;
+}
+
+.graphiql-footer .footer-madeBy {
+  display: flex;
 }
 
 .graphiql-footer .footer-policy a {
@@ -455,9 +479,9 @@ button.graphiql-tab-add > svg {
 }
 
 .graphiql-footer .footer-socials {
-  margin-right: 40px;
   display: flex;
   align-items: flex-end;
+  margin-bottom: 10px;
 }
 
 .graphiql-footer .footer-socials > a {

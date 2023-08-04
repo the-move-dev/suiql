@@ -1,0 +1,163 @@
+.root {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 0;
+  overflow-y: scroll;
+  width: 100%;
+  font-family: "Source Sans Pro", "sans-serif";
+  background-color: #090218FF;
+}
+
+.root::before {
+  content: '';
+  background: url("graphiql/resources/bg.png") no-repeat;
+  background-size: 100% 100%;
+  background-position: top left;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: #090218FF;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  width: 65%;
+  margin: 0 auto;
+  z-index: 2;
+}
+
+.navigation {
+  margin-bottom: 32px;
+}
+
+.navigation > a {
+  font-weight: 400;
+  font-size: 14px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.greaterThan {
+  margin: 0 14px;
+}
+
+section {
+  margin-bottom: 200px;
+}
+
+.sectionHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sectionTitle {
+  font-size: 52px;
+  font-weight: 600;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 16px;
+}
+
+.sectionDescription {
+  font-size: 20px;
+  font-weight: 400;
+  text-align: center;
+  color: #C0BACF;
+  white-space: pre-wrap;
+  width: 50%;
+  margin-bottom: 65px;
+}
+
+.sectionImage {
+  width: 100%;
+}
+
+.notificationsSection {
+  position: relative;
+  background: #090218FF;
+  background-position: 0 20%;
+  padding: 0 17%;
+}
+
+.moreSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 200px;
+  position: relative;
+}
+
+.moreSection::before {
+  content: '';
+  background: url("graphiql/src/pages/AboutUs/images/notificationsSection.png") no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translateY(-50%);
+  width: 100%;
+  height: 1000px;
+  z-index: 1;
+}
+
+.getAccessButton {
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(0deg, rgba(89, 91, 213, 0.5), rgba(89, 91, 213, 0.5)),
+  linear-gradient(0deg, rgba(92, 93, 220, 0.5), rgba(92, 93, 220, 0.5));
+  border: 1px solid rgba(92, 93, 220, 0.5);
+  border-radius: 14px;
+  padding: 16px 28px;
+  margin-top: 32px;
+  display: inline-block;
+  cursor: pointer;
+  z-index: 10;
+  text-decoration: none;
+}
+
+.notifications {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.notificationsContent {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.textContent {
+  color: rgba(192, 186, 207, 1);
+  font-size: 24px;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+}
+
+.notificationsContentText_1 {
+  margin-bottom: 50px;
+}
+
+.notificationsContentText_1 > b {
+  color: rgba(73, 74, 174, 1);
+}
+
+.notificationsContentText_2 {
+  font-size: 20px;
+}
+
+.illustrationContent {
+  width: 40%;
+}

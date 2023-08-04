@@ -22,11 +22,11 @@ TagManager.initialize(tagManagerArgs)
 export type {
   GraphiQLProps,
   GraphiQLInterfaceProps,
-} from './components/GraphiQL';
+} from './pages/GraphiQL';
 export type { GraphiQLProviderProps } from '@graphiql/react';
 
 export {
   GraphiQLInterface,
   GraphiQL,
   GraphiQL as default,
-} from './components/GraphiQL';
+} from './pages/GraphiQL';
