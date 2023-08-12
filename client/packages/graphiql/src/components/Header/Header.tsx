@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import headerLogo from '../../../resources/header-logo.svg';
 import graphApiImg from '../images/graphApi.png';
@@ -9,7 +10,7 @@ const Header = () => {
     return (
         <div className="graphiql-header">
             <div className="graphiql-header-logo">
-                <img src={headerLogo} alt="logo" className="header-logo"/>
+                <Link to="/"><img src={headerLogo} alt="logo" className="header-logo"/></Link>
                 <span className="graphiql-header-subtitle">Query Sui blockchain with GraphQL</span>
             </div>
             <div className="graphiql-header-banner">

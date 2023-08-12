@@ -28,13 +28,14 @@
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  width: 65%;
-  margin: 0 auto;
+  padding: 0 203px;
   z-index: 2;
 }
 
 .navigation {
-  margin-bottom: 32px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
 }
 
 .navigation > a {
@@ -48,8 +49,8 @@
   margin: 0 14px;
 }
 
-section {
-  margin-bottom: 200px;
+.section {
+  margin-bottom: 192px;
 }
 
 .sectionHeader {
@@ -64,6 +65,7 @@ section {
   text-align: center;
   color: #fff;
   margin-bottom: 16px;
+  margin-top: 0;
 }
 
 .sectionDescription {
@@ -74,6 +76,7 @@ section {
   white-space: pre-wrap;
   width: 50%;
   margin-bottom: 65px;
+  margin-top: 0;
 }
 
 .sectionImage {
@@ -84,14 +87,14 @@ section {
   position: relative;
   background: #090218FF;
   background-position: 0 20%;
-  padding: 0 17%;
+  padding: 0 203px;
 }
 
 .moreSection {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 200px;
+  margin-bottom: 192px;
   position: relative;
 }
 
