@@ -32,14 +32,14 @@ export const AboutUs = () => {
           <Link to="/about">About us</Link>
         </div>
         <div className={styles.content}>
-          <section className={styles.suiqlSection}>
+          <section className={`${styles.suiqlSection} ${styles.section}`}>
               <div className={styles.sectionHeader}>
                   <SectionTitle value="SuiQL" />
                   <SectionDescription value="Accelerate your decentralized application development with our seamless Sui indexing GraphQL API." />
                   <SectionImage image={suiQLSectionImage} />
               </div>
           </section>
-            <section className={styles.hasChangedSection}>
+            <section className={`${styles.hasChangedSection} ${styles.section}`}>
                 <div className={styles.sectionHeader}>
                     <SectionTitle value="Sui has changed Web3" />
                     <SectionDescription value="Data is stored in an object-based chain model with horizontal scaling. SuiQL makes querying the Sui blockchain fast and cost-effective." />
@@ -48,7 +48,7 @@ export const AboutUs = () => {
             </section>
         </div>
       </div>
-        <section className={styles.notificationsSection}>
+        <section className={`${styles.notificationsSection} ${styles.section}`}>
             <div className={styles.moreSection}>
                 <h1 className={styles.sectionTitle} style={{ zIndex: 10, position: 'relative' }}>And more is coming</h1>
                 <a
